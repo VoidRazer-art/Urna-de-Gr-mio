@@ -51,6 +51,11 @@ function enviarComRetry(chapa, tentativas) {
 }
 
 function mostrarConfirmacao() {
+  const audio = document.getElementById("Som urna");
+    audio.currentTime = 0;
+    audio.play().catch(() => {
+        console.warn("Som bloqueado pelo navegador até interação do usuário.");
+        
     urna.classList.add("hidden");
     confirmacao.classList.remove("hidden");
     confirmacao.style.opacity = 0;
