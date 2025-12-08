@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f5f5f5;
+    padding: 40px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    background: #2b5797;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #1d3d6b;
+}
+
+.hidden {
+    display: none;
+}
+
+#confirmacao {
+    font-size: 32px;
+    color: green;
+    margin-top: 50px;
+    opacity: 0;
+}

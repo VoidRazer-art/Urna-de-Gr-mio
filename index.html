@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Urna - Eleição do Grêmio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tela de senha -->
+    <div id="telaSenha">
+        <h2>Senha do Mesário</h2>
+        <input type="password" id="senhaInformada" placeholder="Digite a senha do mesário">
+        <button id="btnEntrar">Entrar</button>
+    </div>
+
+    <!-- Urna -->
+    <div id="urna" class="hidden">
+        <h2>Selecione sua chapa:</h2>
+
+        <label><input type="radio" name="voto" value="1"> Chapa 1</label><br>
+        <label><input type="radio" name="voto" value="2"> Chapa 2</label><br>
+        <label><input type="radio" name="voto" value="3"> Chapa 3</label><br><br>
+
+        <button id="btnVotar">VOTAR</button>
+    </div>
+
+    <!-- Tela de confirmação -->
+    <div id="confirmacao" class="hidden">✔ Voto registrado!</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
