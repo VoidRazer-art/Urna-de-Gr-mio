@@ -29,7 +29,7 @@ btnVotar.onclick = () => {
         return;
     }
 
-     const audio = document.getElementById("somUrna");
+     const audio = document.getElementById("Somurna");
     audio.currentTime = 0;
     audio.play().catch(err => console.warn(err));
     
