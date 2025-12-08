@@ -31,7 +31,10 @@ btnVotar.onclick = () => {
 
      const audio = document.getElementById("Somurna");
     audio.currentTime = 0;
-    audio.play().catch(err => console.warn(err));
+    
+    audio.play().catch(err => {
+        console.warn("Áudio bloqueado, mas o voto continuará normalmente.");
+    });
     
     const chapa = item.value;
     // Função que tenta enviar e faz retry em caso de falha
