@@ -29,11 +29,12 @@ btnVotar.onclick = () => {
         return;
     }
 
-     const audio = document.getElementById("Somurna");
-    audio.currentTime = 0;
-    
-    audio.play().catch(err => {
-        console.warn("Áudio bloqueado, mas o voto continuará normalmente.");
+    const audio = document.getElementById("somUrna");
+    audio.play().then(() => {
+        audio.pause();
+        audio.currentTime = 0;
+    }).catch(() => {
+        // navegador ainda não liberou o som, mas não tem problema
     });
     
     const chapa = item.value;
@@ -59,6 +60,10 @@ function enviarComRetry(chapa, tentativas) {
 }
 
 function mostrarConfirmacao() {
+     const audio = document.getElementById("somUrna");
+    audio.currentTime = 0;
+    audio.play().catch(err => console.warn("Som bloqueado:", err));
+    
     urna.classList.add("hidden");
     confirmacao.classList.remove("hidden");
     confirmacao.style.opacity = 0;
