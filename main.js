@@ -28,6 +28,14 @@ btnVotar.onclick = () => {
         alert("Escolha uma chapa!");
         return;
     }
+
+     const audio = document.getElementById("somUrna");
+    audio.currentTime = 0;
+    audio.play().catch(err => console.warn(err));
+
+    const chapa = item.value;
+    enviarComRetry(chapa, 3);
+    
     const chapa = item.value;
     // Função que tenta enviar e faz retry em caso de falha
     enviarComRetry(chapa, 3);
@@ -51,11 +59,6 @@ function enviarComRetry(chapa, tentativas) {
 }
 
 function mostrarConfirmacao() {
-  const audio = document.getElementById("Somurna");
-    audio.currentTime = 0;
-    audio.play().catch(() => {
-        console.warn("Som bloqueado pelo navegador até interação do usuário.");
-        
     urna.classList.add("hidden");
     confirmacao.classList.remove("hidden");
     confirmacao.style.opacity = 0;
