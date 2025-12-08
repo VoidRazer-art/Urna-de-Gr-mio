@@ -29,7 +29,7 @@ btnVotar.onclick = () => {
         return;
     }
 
-    const audio = document.getElementById("somUrna");
+    const audio = document.getElementById("Somurna");
     audio.play().then(() => {
         audio.pause();
         audio.currentTime = 0;
@@ -60,7 +60,7 @@ function enviarComRetry(chapa, tentativas) {
 }
 
 function mostrarConfirmacao() {
-     const audio = document.getElementById("somUrna");
+     const audio = document.getElementById("Somurna");
     audio.currentTime = 0;
     audio.play().catch(err => console.warn("Som bloqueado:", err));
     
