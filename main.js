@@ -32,9 +32,6 @@ btnVotar.onclick = () => {
      const audio = document.getElementById("somUrna");
     audio.currentTime = 0;
     audio.play().catch(err => console.warn(err));
-
-    const chapa = item.value;
-    enviarComRetry(chapa, 3);
     
     const chapa = item.value;
     // Função que tenta enviar e faz retry em caso de falha
